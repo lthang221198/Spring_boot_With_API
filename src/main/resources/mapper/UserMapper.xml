@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="practice.spring.hlthang.mapper.MapperUsr">
+ <select id="selectAllUser" resultMap="result">
+        SELECT * FROM EMPLOYEES;
+    </select>
+     
+   <delete id="deleteById" parameterType="int">
+        DELETE from employees WHERE ID = #{id};
+    </delete>
+    <select id="findById" resultMap="result">
+        SELECT * FROM EMPLOYEES WHERE ID=#{id};
+    </select>
+    <update id="updateUser" parameterType="practice.spring.hlthang.model.User">
+        UPDATE EMPLOYEES SET FULLNAME = #{fullname}, USERNAME = #{username}, PASSWORD = #{password} WHERE ID = #{id};
+    </update>
+    <resultMap id = "result" type = "practice.spring.hlthang.model.User">
+       <result property = "id" column = "ID"/>
+       <result property = "fullname" column = "FULLNAME"/>
+       <result property = "username" column = "USERNAME"/>
+       <result property = "password" column = "PASSWORD"/>
+    </resultMap>
+</mapper>

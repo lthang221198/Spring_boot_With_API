@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="css/personList.css">
+<script type="text/javascript" src="js/personList.js"></script>
+<link rel="text/javascript" href="js/main.js">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+</head>
+<body onload="helloFunc()">
+ 
+	<h2>List of accounts
+	</h2>
+	<div class="wrap">
+		<div class="search">
+			<input type="text" class="searchTerm"
+				placeholder="What are you looking for?">
+			<button type="submit" class="searchButton">
+				<i class="fa fa-search"></i>
+			</button>
+		</div>
+	</div>
+	<div class="tablelist">
+		<table id="tablelist">
+			<tr>
+				<th>ID</th>
+				<th>Fullname</th>
+				<th>Username</th>
+				<th>Password</th>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

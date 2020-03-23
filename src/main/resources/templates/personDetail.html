@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"  type="text/css" href="/css/personDetail.css">
+<script type="text/javascript" src="/js/personDetail.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body onload="getId()">
+	<h3>Cập nhật thông tin user</h3>
+
+	<div class="form">
+		<form id="formUpdate" action="">
+
+			<label for="id">ID</label> <input type="text" id="id" value="null"
+				name="id" disabled> <label for="fullname">Full name</label>
+			<input type="text" id="fname" name="fullname"
+				placeholder="Your name.."> <label for="username">Username
+			</label> <input type="text" id="lname" name="username"
+				placeholder="Your last name.."> <label for="password">Password</label>
+			<input type="text" id="password" name="password"
+				placeholder="Password.."> <input type="button" class="btn-return"
+				value="Update" onclick="updateData()">
+				<input style="background-color:blue;" type="button" class="btn-return"
+				value="Return" onclick="returnList()">
+		</form>
+	</div>
+</body>
+</html>
